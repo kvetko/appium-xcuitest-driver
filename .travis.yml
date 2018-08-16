@@ -44,6 +44,11 @@ matrix:
       if: type != cron
       env: CI_METRICS=1 PLATFORM_VERSION=11.3 TEST=functional/web
 
+    # smoke test on xcode 10.0 web
+    - osx_image: xcode10
+      if: type != cron
+      env: CI_METRICS=1 PLATFORM_VERSION=12.0 TEST=functional/web
+
 
     # Sauce Emusim tests
     - os: linux
